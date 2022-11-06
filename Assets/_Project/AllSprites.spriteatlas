@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AllSprites
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 47
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 8e81450fa067e11418a45a3a590a8ab9, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: a2d74821682c3a24abe716fdb0302e82, type: 3}
+  - {fileID: 21300000, guid: ff95a5639be5b4a43a51582758588c7e, type: 3}
+  - {fileID: 21300000, guid: 42c61f44417d8db4e8a4fca8e6cedf18, type: 3}
+  - {fileID: 21300000, guid: 8b3d169523504064892e19dc19229bf6, type: 3}
+  - {fileID: 21300000, guid: 91841806572b51e45b322cebd962b463, type: 3}
+  - {fileID: 21300000, guid: 75054996d9ca5184aba3a475e57729e1, type: 3}
+  - {fileID: 21300000, guid: 7a454458e793a684a81b7ab9d39d408d, type: 3}
+  - {fileID: 21300000, guid: c14daca83c7b23a47bf7494ad0176a65, type: 3}
+  - {fileID: 21300000, guid: 263bbd2ad5784804b9cf18cf08c2925e, type: 3}
+  - {fileID: 21300000, guid: 5207f61bdfbb867428649346271f50b3, type: 3}
+  - {fileID: 21300000, guid: cf26191cd6505ba4faf4b761ca0289a1, type: 3}
+  - {fileID: 21300000, guid: 97fc94cd79454ae4a98cc4fc7a12a8c6, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - DropBlue
+  - Cube
+  - HorizontalTwoCubes
+  - Rounded30
+  - circle
+  - circle_256
+  - VerticalTwoCubes
+  - 7Cubes
+  - newInputWheel
+  - Corner
+  - Drop
+  - Taur
+  m_RenderDataMap: {}
+  m_Tag: AllSprites
+  m_IsVariant: 0
