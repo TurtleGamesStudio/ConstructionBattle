@@ -38,10 +38,13 @@ public class MovablePanel : MonoBehaviour
 
     public void DeactivatePanel()
     {
-        _rectMover.Completed += OnCompleted;
-        _rectMover.MoveTo(_startPosition, _animationTime);
-        _canvasGroup.interactable = false;
-        _canvasGroup.blocksRaycasts = false;
+        if (isActiveAndEnabled)
+        {
+            _rectMover.Completed += OnCompleted;
+            _rectMover.MoveTo(_startPosition, _animationTime);
+            _canvasGroup.interactable = false;
+            _canvasGroup.blocksRaycasts = false;
+        }
     }
 
     private void OnCompleted()

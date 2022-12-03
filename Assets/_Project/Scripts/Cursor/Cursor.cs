@@ -12,6 +12,8 @@ public class Cursor : MonoBehaviour
 
     public event Action<Vector3> Dropped;
 
+    public int Level { get; private set; } = 1;
+
     public void Move(Vector3 translation)
     {
         _detail.Move(translation);
@@ -27,6 +29,7 @@ public class Cursor : MonoBehaviour
     {
         while (_levelChecker.CheckCollisions())
         {
+            Level++;
             transform.position = new Vector3(transform.position.x, transform.position.y + _offset, transform.position.z);
         }
     }

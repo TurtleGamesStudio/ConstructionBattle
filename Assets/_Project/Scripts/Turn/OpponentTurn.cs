@@ -1,14 +1,15 @@
 using UnityEngine;
+using System.Collections;
 
 public class OpponentTurn : Turn
 {
     [SerializeField] private Cursor _cursor;
     [SerializeField] private Detail[] _templates;
     [SerializeField] private float _aimDeflection;
-    [SerializeField] private InterTurnsBehaviour _interTurnsBehaviour;
 
     private Detail _detail;
     private Vector3 _lastCursorPosition;
+    private IInterTurnsBehaviour _interTurnsBehaviour;
 
     private void OnEnable()
     {
@@ -23,6 +24,11 @@ public class OpponentTurn : Turn
         {
             _detail.ScaleCompleted -= OnDetailScaleComleted;
         }
+    }
+
+    public void Init(IInterTurnsBehaviour interTurnsBehaviour)
+    {
+        _interTurnsBehaviour = interTurnsBehaviour;
     }
 
     protected override void OnStart()
@@ -73,6 +79,14 @@ public class OpponentTurn : Turn
     private void Drop()
     {
         _cursor.Drop();
+        //_interTurnsBehaviour.StartBehaviour(_detail.CollisionEventsSenders);
+        StartCoroutine(Wait());
+    }
+
+    private IEnumerator Wait()
+    {
+        //yield return null;
+        yield return new WaitForSeconds(0.5f);
         _interTurnsBehaviour.StartBehaviour(_detail.CollisionEventsSenders);
     }
 }

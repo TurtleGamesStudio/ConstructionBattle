@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class GameOverHandler : MonoBehaviour
 {
     [SerializeField] private Game _game;
-    [SerializeField] private EndScreen _winScreen;
+    [SerializeField] private WinScreen _winScreen;
     [SerializeField] private EndScreen _loseScreen;
 
     [SerializeField] private ParticleSystem[] _confetties;
@@ -15,13 +15,13 @@ public class GameOverHandler : MonoBehaviour
     private void OnEnable()
     {
         _game.Won += OnWon;
-        _game.Lose += OnLose;
+        _game.Lose += OnWon;
     }
 
     private void OnDisable()
     {
         _game.Won -= OnWon;
-        _game.Lose -= OnLose;
+        _game.Lose -= OnWon;
     }
 
     private void OnWon()

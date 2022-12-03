@@ -1,15 +1,15 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerTurn : Turn
 {
     [SerializeField] private DetailChoosingPanel _detailChoosingPanel;
     [SerializeField] private DropButton _dropButton;
-    [SerializeField] private InterTurnsBehaviour _interTurnsBehaviour;
-
 
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private Inputer _inputer;
 
+    private IInterTurnsBehaviour _interTurnsBehaviour;
     private Detail _currentDetail;
 
     private void OnEnable()
@@ -20,6 +20,22 @@ public class PlayerTurn : Turn
 
     private void OnDisable()
     {
+        Unscribe();
+    }
+
+    public void Init(IInterTurnsBehaviour interTurnsBehaviour)
+    {
+        _interTurnsBehaviour = interTurnsBehaviour;
+        _detailChoosingPanel.Init();
+    }
+
+    protected override void OnStart()
+    {
+        _detailChoosingPanel.ActivatePanel();
+    }
+
+    private void Unscribe()
+    {
         _detailChoosingPanel.Clicked -= OnDetailButtonClicked;
         _dropButton.Clicked -= OnDropButtonClicked;
 
@@ -27,16 +43,6 @@ public class PlayerTurn : Turn
         {
             _currentDetail.ScaleCompleted -= OnDetailScaleCompleted;
         }
-    }
-
-    public void Init()
-    {
-        _detailChoosingPanel.Init();
-    }
-
-    protected override void OnStart()
-    {
-        _detailChoosingPanel.ActivatePanel();
     }
 
     private void OnDetailButtonClicked(Detail detail)
@@ -53,11 +59,26 @@ public class PlayerTurn : Turn
         _playerMovement.enabled = true;
     }
 
+    public void Lose()
+    {
+        Unscribe();
+        _detailChoosingPanel.DeactivatePanel();
+        OnDropButtonClicked();
+    }
+
     private void OnDropButtonClicked()
     {
         _playerMovement.enabled = false;
         _inputer.enabled = false;
         _dropButton.Deactivate();
+        //_interTurnsBehaviour.StartBehaviour(_currentDetail.CollisionEventsSenders);
+        StartCoroutine(Wait());
+    }
+
+    private IEnumerator Wait()
+    {
+        //yield return null;
+        yield return new WaitForSeconds(0.5f);
         _interTurnsBehaviour.StartBehaviour(_currentDetail.CollisionEventsSenders);
     }
 }

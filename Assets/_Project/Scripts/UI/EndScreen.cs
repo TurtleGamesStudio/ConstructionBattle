@@ -11,6 +11,11 @@ public class EndScreen : MonoBehaviour
     {
         Appear(_upperPanel);
         Appear(_lowerPanel);
+        OnShow();
+    }
+
+    protected virtual void OnShow()
+    {
     }
 
     private void Appear(RectMover panel)

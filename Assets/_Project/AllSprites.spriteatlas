@@ -62,6 +62,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 5207f61bdfbb867428649346271f50b3, type: 3}
   - {fileID: 21300000, guid: cf26191cd6505ba4faf4b761ca0289a1, type: 3}
   - {fileID: 21300000, guid: 97fc94cd79454ae4a98cc4fc7a12a8c6, type: 3}
+  - {fileID: 21300000, guid: 58ad9fffea672264595951a9c240e574, type: 3}
   m_PackedSpriteNamesToIndex:
   - DropBlue
   - Cube
@@ -75,6 +76,7 @@ SpriteAtlas:
   - Corner
   - Drop
   - Taur
+  - Cloud
   m_RenderDataMap: {}
   m_Tag: AllSprites
   m_IsVariant: 0

@@ -19,6 +19,7 @@ public class Detail : MonoBehaviour
 
     public event Action ScaleCompleted;
     public event Action MoveCompleted;
+    public event Action Dropping;
 
     public Sprite Sprite => _sprite;
 
@@ -52,6 +53,7 @@ public class Detail : MonoBehaviour
 
     public void Drop()
     {
+        Dropping?.Invoke();
         Destroy(_rigidbody);
 
         foreach (CollisionEventsSender collisionEventsSender in _collisionEventsSenders)

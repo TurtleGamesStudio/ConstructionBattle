@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class InterTurnsBehaviour : MonoBehaviour
+public class InterTurnsBehaviour : MonoBehaviour, IInterTurnsBehaviour
 {
     [SerializeField] private float _stabilizationInterval;
     [SerializeField] private Timer _crushTimer;
