@@ -201,7 +201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cursor: {fileID: 225930089}
   _inputer: {fileID: 1695046758}
-  _speed: 500
+  _speed: 100
 --- !u!1001 &49181656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4401,7 +4401,6 @@ MonoBehaviour:
   - {fileID: 5048852176996645157, guid: 503c3d44a4ff8e34fa6d67f10793f841, type: 3}
   - {fileID: 5048852176996645157, guid: 8fac1d7790a637e47a660e44626d457f, type: 3}
   _aimDeflection: 0.4
-  _cloud: {fileID: 1435008382431304605, guid: d4f9f57d52cdf8c49b67d8f876ebab6f, type: 3}
 --- !u!114 &1819621061
 MonoBehaviour:
   m_ObjectHideFlags: 0
