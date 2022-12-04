@@ -71,13 +71,11 @@ public class PlayerTurn : Turn
         _playerMovement.enabled = false;
         _inputer.enabled = false;
         _dropButton.Deactivate();
-        //_interTurnsBehaviour.StartBehaviour(_currentDetail.CollisionEventsSenders);
         StartCoroutine(Wait());
     }
 
     private IEnumerator Wait()
     {
-        //yield return null;
         yield return new WaitForSeconds(0.5f);
         _interTurnsBehaviour.StartBehaviour(_currentDetail.CollisionEventsSenders);
     }

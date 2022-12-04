@@ -31,6 +31,8 @@ public class MovablePanel : MonoBehaviour
     public void ActivatePanel()
     {
         _panel.SetActive(true);
+        _rectMover.Completed -= OnCompleted;
+
         _canvasGroup.interactable = true;
         _canvasGroup.blocksRaycasts = true;
         _rectMover.MoveTo(_endPosition, _animationTime);

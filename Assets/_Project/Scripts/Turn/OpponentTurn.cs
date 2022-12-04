@@ -79,13 +79,11 @@ public class OpponentTurn : Turn
     private void Drop()
     {
         _cursor.Drop();
-        //_interTurnsBehaviour.StartBehaviour(_detail.CollisionEventsSenders);
         StartCoroutine(Wait());
     }
 
     private IEnumerator Wait()
     {
-        //yield return null;
         yield return new WaitForSeconds(0.5f);
         _interTurnsBehaviour.StartBehaviour(_detail.CollisionEventsSenders);
     }

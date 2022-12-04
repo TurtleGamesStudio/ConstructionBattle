@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.Events;
+using System;
 
 public class Inputer : MonoBehaviour
 {
@@ -10,8 +10,8 @@ public class Inputer : MonoBehaviour
     private Vector2 _direction;
     private float _share;
 
-    public event UnityAction TouchStarted;
-    public event UnityAction TouchFinished;
+    public event Action TouchStarted;
+    public event Action TouchFinished;
 
     public Vector2 CenterPoint => _centerPoint;
     public float Share => _share;

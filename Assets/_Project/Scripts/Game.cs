@@ -11,20 +11,14 @@ public class Game : MonoBehaviour
     public event Action Won;
     public event Action Lose;
 
-    private IInterTurnsBehaviour _interTurnsBehaviour;
+    private IInterTurnsBehaviour _interTurnsBehaviour => (IInterTurnsBehaviour)_cooperativeBehaviour;
 
     private void OnValidate()
     {
-        if (_cooperativeBehaviour != null)
+        if (_cooperativeBehaviour != null && _cooperativeBehaviour is not IInterTurnsBehaviour)
         {
-            if (_cooperativeBehaviour is not IInterTurnsBehaviour)
-            {
-                throw new NotImplementedException($"{nameof(_cooperativeBehaviour)} not implement {nameof(IInterTurnsBehaviour)}");
-            }
-            else
-            {
-                _interTurnsBehaviour = (IInterTurnsBehaviour)_cooperativeBehaviour;
-            }
+            Debug.LogError($"{nameof(_cooperativeBehaviour)} needs to implement {nameof(IInterTurnsBehaviour)}");
+            _cooperativeBehaviour = null;
         }
     }
 

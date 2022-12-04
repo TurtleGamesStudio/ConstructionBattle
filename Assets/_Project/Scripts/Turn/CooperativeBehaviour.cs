@@ -14,8 +14,15 @@ public class CooperativeBehaviour : MonoBehaviour, IInterTurnsBehaviour
 
     private void OnDisable()
     {
-        _groundDropHandler.Dropped -= OnCrush;
-        _dropHandler.Dropped -= OnDropped;
+        if (_groundDropHandler != null)
+        {
+            _groundDropHandler.Dropped -= OnCrush;
+        }
+
+        if (_dropHandler != null)
+        {
+            _dropHandler.Dropped -= OnDropped;
+        }
     }
 
     public void Init()
