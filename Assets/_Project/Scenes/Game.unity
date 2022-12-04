@@ -4412,7 +4412,7 @@ MonoBehaviour:
   - {fileID: 5048852176996645157, guid: 3482b1de41ec965408f3b05789674ec4, type: 3}
   - {fileID: 5048852176996645157, guid: 10bbc147d117d91478e5eaafb85131e3, type: 3}
   - {fileID: 5048852176996645157, guid: 503c3d44a4ff8e34fa6d67f10793f841, type: 3}
-  - {fileID: 5048852176996645157, guid: 8fac1d7790a637e47a660e44626d457f, type: 3}
+  - {fileID: 5048852176996645157, guid: db26f71cb3faa7f4b9b08066599b971a, type: 3}
   _aimDeflection: 0.4
 --- !u!114 &1819621061
 MonoBehaviour:
@@ -6027,7 +6027,7 @@ PrefabInstance:
     - target: {fileID: 6251211265105376091, guid: c610c13b2a1d6e24abc514e28501ab7c, type: 3}
       propertyPath: _details.Array.data[3]
       value: 
-      objectReference: {fileID: 5048852176996645157, guid: 8fac1d7790a637e47a660e44626d457f, type: 3}
+      objectReference: {fileID: 5048852176996645157, guid: db26f71cb3faa7f4b9b08066599b971a, type: 3}
     - target: {fileID: 6251211265105376091, guid: c610c13b2a1d6e24abc514e28501ab7c, type: 3}
       propertyPath: _details.Array.data[4]
       value: 
